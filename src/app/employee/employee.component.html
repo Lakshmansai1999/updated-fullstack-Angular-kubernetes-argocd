@@ -1,0 +1,39 @@
+<div class="container">
+
+  <h2>Add Employee</h2>
+
+  <input
+    type="text"
+    placeholder="Name"
+    [(ngModel)]="employee.name">
+
+  <input
+    type="email"
+    placeholder="Email"
+    [(ngModel)]="employee.email">
+
+  <button (click)="saveEmployee()">
+    Save
+  </button>
+
+  <hr>
+
+  <h2>Employee List</h2>
+
+  <table border="1" cellpadding="10">
+
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.email }}</td>
+    </tr>
+
+  </table>
+
+</div>
